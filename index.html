@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+
+
+        body {
+            color: white;
+            font-family: 'Roboto';
+            background: linear-gradient(to bottom, #9be15d, #00e3ae);
+            opacity: 0.8;
+        }
+
+        .head_form {
+            margin: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heading {
+            font-size: 4rem;
+            transform: skewY(-5deg);
+            font-family: 'Megrim', sans-serif;
+        }
+
+        .heading::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            height: 50%;
+            width: 90%;
+            top: 60%;
+            left: 7%;
+            transform: skewY(10deg);
+            background: linear-gradient(to bottom, #9be15d, #00e3ae);
+        }
+
+
+
+        .con {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .card-container {
+            margin-top: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            transform: skewX(-20deg);
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s;
+            box-shadow: 0 2rem 6rm 1rem rgba(0, 0, 0, 0.15);
+        }
+
+        .card_emoji {
+            background-color: white;
+            font-size: 2.5rem;
+            letter-spacing: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: -4rem;
+            padding: .7rem 5rem 0.5rem 1rem;
+        }
+
+        .card_info {
+            padding: 0 10px;
+            background: linear-gradient(to bottom, #9be15d, #00e3ae);
+            display: flex;
+            height: 73px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+
+
+        }
+
+        .card_detail {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card_name {
+            transform: skewX(20deg);
+            font-family: 'Megrim', sans-serif;
+        }
+
+        .product_info {
+            padding: 0 10px;
+            height: 73px;
+        }
+
+        .card_boxes {
+            display: flex;
+            align-self: stretch;
+            justify-content: center;
+            border-right: 1px solid gray;
+            background-color: white;
+            align-items: center;
+        }
+
+        .card_boxes:nth-child(3) {
+            border-left: none;
+            /* Remove border for the last card_boxes */
+        }
+
+        .price_for_product {
+            transform: skewX(20deg);
+            color: black;
+            padding: 0px 10px;
+        }
+
+        .organic {
+            font-size: 1rem;
+            padding: 0px 10px;
+            transform: skewX(20deg);
+            height: 73px;
+            color: rgb(92, 228, 92);
+            background-clip: text;
+            text-transform: uppercase;
+        }
+
+        .price_box {
+            color: black;
+            font-size: 1rem;
+            transform: skewX(20deg);
+            padding: 0px 10px;
+
+
+        }
+
+        .card_link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 72px;
+        }
+
+        .card_link span {
+
+            transform: skewX(20deg);
+
+        }
+
+        .card:hover {
+            transform: skewX(-20deg) scale(1.08);
+            box-shadow: 0 3rem 8rem 2rem rgba(0, 0, 0, 0.15)
+        }
+
+        .not_organic {
+            display: none;
+        }
+
+        .emoji_right {
+            font-size: 1.5rem;
+        }
+
+        .card_link:link,
+        .card_link:visited {
+
+            font-size: 1rem;
+            ;
+            background-color: #9be15d;
+            color: white;
+            text-decoration: none;
+            font-size: 1.0rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 0 1rem;
+        }
+
+        .not-organic {
+            display: none;
+        }
+
+        .card_link:hover,
+        .card_link:active {
+            background-color: #9be15d;
+        }
+    </style>
+    <title>🌽 Node Farm 🥦</title>
+</head>
+
+<body>
+    <div class="head_form">
+        <h1 class="heading">🌽 Node Farm 🥦</h1>
+    </div>
+    <div class="card_container">
+        {%PRODUCT_CARDS%}
+    </div>
+</body>
+
+</html>

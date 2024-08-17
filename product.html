@@ -1,0 +1,29 @@
+ <div class="con">
+    <figure class="card">
+        <div class="card_emoji card_detail">
+            {%PRODUCT_IMAGE%}{%PRODUCT_IMAGE%}
+        </div>
+    
+        <div class="card_detail card_info ">
+           <h2 class="card_name">{%PRODUCT_NAME%}</h2>
+        </div>
+    
+        <div class="card_boxes">
+            <h6 class=" card_detail organic {%NOT_ORGANIC%}">Organic!</h6>
+        </div>
+            <div class=" card_detail card_boxes">
+               <h3 class="price_for_product"> {%QUANTITY%} per📦</h3>
+            </div>
+    
+            <div class="card_detail card_boxes ">
+                <h6 class="price_box">{%PRICE%}€</h6>
+            </div>
+            <div class="card_detail card_link">
+                <a class="card_link" href="/product?id={%ID%}">
+                    <span>Detail <i class="emoji_right">👉</i></span>
+                </a>  
+            </div>
+        </div>
+    </figure>
+</div>
+

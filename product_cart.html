@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Megrim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: white;
+            font-family: 'Roboto';
+            background: linear-gradient(to bottom, #9be15d, #00e3ae);
+            opacity: 0.8;
+        }
+
+        .head_form {
+            margin: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .heading {
+            font-size: 4rem;
+            transform: skewY(-5deg);
+            font-family: 'Megrim', sans-serif;
+        }
+
+        .heading::before {
+            content: "";
+            z-index: -1;
+            position: absolute;
+            height: 50%;
+            width: 90%;
+            top: 60%;
+            left: 7%;
+            transform: skewY(10deg);
+            background: linear-gradient(to bottom, #9be15d, #00e3ae);
+        }
+        .product_image::before{
+            content: "";
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            top:0;
+            left:0;
+            opacity:0.5 ;
+            z-index: 100;
+            background: linear-gradient(to left bottom,#9be15d, #00e3ae );
+        }
+        .product {
+            margin: 5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        
+        .product_organic {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            color: white;
+            background: linear-gradient(to bottom, #9be15d, #00e3ae);
+            border-radius: 100px;
+            box-shadow:0 2rem 4rem rgba(0,0,0,0.4);
+            font-weight: 900;
+            position: absolute;
+            top: -28px;
+            right: 450px;
+            transform: rotate(20deg);
+            z-index: 1000;
+        }
+
+        .product_link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 450px;
+            text-decoration: none;
+            color: white;
+            background-color: #68d00d;
+            text-transform: uppercase;
+            transform: skewX(-20deg);
+            height: 7vh;
+        }
+
+        .product_name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            height: 7vh;
+            background: linear-gradient(to bottom, #9be15d, #00e3ae);
+            font-family: 'Megrim', sans-serif;
+        }
+        .product_image {
+            z-index: -1;
+            width: 400px;
+            display: flex;
+            background-color: #8fd8c7;
+            justify-content: center;
+            align-items: center;
+            height: 25vh;
+            position: relative;
+        }
+
+        .product_emoji {
+            font-size: 5rem;
+            position: absolute;
+        }
+
+        .product__emoji--1 {
+        top: 0rem;
+        left: 0rem;
+        z-index: 10;
+      }
+
+      .product__emoji--2 {
+        top: 3rem;
+        left: 9rem;
+      }
+
+      .product__emoji--3 {
+        top: 5rem;
+        right: 15rem;
+      }
+
+      .product__emoji--4 {
+        top: 7rem;
+        right: 2rem;
+        z-index: 10;
+      }
+
+      .product__emoji--5 {
+        bottom: 3rem;
+        left: 18rem;
+      }
+
+      .product__emoji--6 {
+        bottom: 1rem;
+        left: 5rem;
+      }
+
+      .product__emoji--7 {
+        bottom: 3rem;
+        right: 14rem;
+      }
+
+      .product__emoji--8 {
+        bottom: 1rem;
+        right: 0rem;
+      }
+
+      .product__emoji--9 {
+        top: 4rem;
+        left: 19rem;
+      }
+
+        .back {
+            background-color: white;
+            font-weight: 900;
+            position: absolute;
+            top: 10px;
+            right: 785px;
+            width: 80px;
+            text-decoration: none;
+            color: black;
+            padding: 2px;
+            border-radius: 10px;
+        }
+
+        .back:link,
+        .back:visited{
+            background-color:#68d00d;
+            box-shadow: 0 1rem 3rem rgba(0,0,0,0.3);
+        }
+
+        .product_descrption {
+            padding: 20px;
+            color: black;
+            background-color: white;
+            width: 400px;
+        }
+
+        .shopping_cart_img {
+            transform: skewX(20deg);
+        }
+
+        .cart {
+            font-weight: 900;
+            transform: skewX(20deg);
+        }
+
+        .product_information {
+            background-color: white;
+            color: black;
+            padding: 5px 5px;
+        }
+
+        .more {
+            display: flex;
+            margin: 10px 2px;
+            padding: 1px 2px;
+        }
+
+        .product_link:visited,
+        .product_link:link{
+            box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+            transform: scale(1.05) skewX(-20deg);
+        }
+        .product_link:hover,
+        .product_link:active{
+            box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.2);
+            transition: all 0.3sec;
+            transform: scale(1.1) skewX(-20deg);
+
+        }
+        .more_left {
+            width: 200px;
+            padding: 2px;
+        }
+
+        .emoji {
+            margin: 5px;
+        }
+        .not-organic{
+            display: none;
+        }
+    </style>
+    <title>Node Farm</title>
+</head>
+
+<body>
+    <div class="head_form">
+        <h1 class="heading">🌽 Node Farm 🥦</h1>
+    </div>
+    <figure class="product">
+        <div class="product_organic {%NOT_ORGANIC%}">
+            <h4 class="organic_text">ORGANIC</h4>
+        </div>
+        <a href="/overview" class="back">
+            <span class="emoji">👈</span>BACK
+        </a>
+        </div>
+        <div class="product_image">
+            <span class="product_emoji product__emoji--1">{%PRODUCT_IMAGE%}</span>
+            <span class="product_emoji product__emoji--2">{%PRODUCT_IMAGE%}</span>
+            <span class="product_emoji product__emoji--3">{%PRODUCT_IMAGE%}</span>
+            <span class="product_emoji product__emoji--4">{%PRODUCT_IMAGE%}</span>
+            <span class="product_emoji product__emoji--5">{%PRODUCT_IMAGE%}</span>
+            <span class="product_emoji product__emoji--6">{%PRODUCT_IMAGE%}</span>
+            <span class="product_emoji product__emoji--7">{%PRODUCT_IMAGE%}</span>
+            <span class="product_emoji product__emoji--8">{%PRODUCT_IMAGE%}</span>
+            <span class="product_emoji product__emoji--9">{%PRODUCT_IMAGE%}</span>
+        </div>
+        <h2 class="product_name">FRESH {%PRODUCT_NAME%}</h2>
+        <div class="product_information">
+            <div class="more">
+                <p class="more_left"><span class="emoji">🌍</span>From {%FROM%}</p>
+                <p class="more_right"><span class="emoji">❤️</span>{%NUTRIENTS%}</p>
+            </div>
+            <div class="more">
+                <p class="more_left"> <span class="emoji">📦</span>{%QUANTITY%}🥑 </p>
+                <p class="more_right"><span class="emoji">🏷</span>{%PRICE%}€ </p>
+            </div>
+        </div>
+        <a href="#" class="product_link">
+            <span class="shopping_cart_img">🛒</span>
+            <span class="cart">Add to Shopping Cart({%PRICE%}€)</span>
+        </a>
+        <p class="product_descrption">
+            {%DESCRIPTION%}
+        </p>
+    </figure>
+</body>
+
+</html>
